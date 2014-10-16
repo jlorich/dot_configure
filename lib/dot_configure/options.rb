@@ -7,6 +7,6 @@ module DotConfigure
 
     def locked?
       locked || false
-    end    
+    end
   end
 end

@@ -27,6 +27,6 @@ module DotConfigure
 
   # Customizable default options
   def default_options
-    { }
+    {}
   end
 end
