@@ -42,7 +42,7 @@ When you `include` dotconfigure, rather than extend, you get all the Class/Modul
   
 Class/Module and instance level options are completely separate so each individual object can have it's own information.
 
-#####Options
+#####DotConfigure::Options
 The options returned are an [OpenStruct](http://www.ruby-doc.org/stdlib-2.0/libdoc/ostruct/rdoc/OpenStruct.html) that has been extended in `dot_configure/options.rb` to allow for specific monkey-patching if desired.  OpenStructs allow for hash, string and dot access to any values.
 
     > `TestClass.options.dot_configure_rules`
@@ -55,7 +55,7 @@ The options returned are an [OpenStruct](http://www.ruby-doc.org/stdlib-2.0/libd
     => true
 
 #####Locking
-When calling `configure` can also pass in `lock: true` to prevent further write access to the options.  Once configured with the lock setting, any subsequent attempts to call .configure will fail.  Also, calls to .options will return a cloned options hash so modifications will not be saved.
+When calling `configure` can also pass in `lock: true` to prevent further write access to the options.  Once configured with the lock setting, any subsequent attempts to call `.configure` will fail.  Also, calls to `.options` will return a cloned options hash so modifications will not be saved.
 
 To call a locking configure method simply set the keyword argument:
 
