@@ -14,7 +14,7 @@ And then execute:
 
 ## Usage
 
-Extend DotConfigure to provide Class and Module level options
+`Extend` DotConfigure to provide Class and Module level options
 
     class TestClass
       extend DotConfigure
@@ -28,12 +28,12 @@ Extend DotConfigure to provide Class and Module level options
     
     => #<DotConfigure::Options dot_configure_rules=true>
 
-The options are an [OpenStruct](http://www.ruby-doc.org/stdlib-2.0/libdoc/ostruct/rdoc/OpenStruct.html) that has been extended in `dot_configure/options.rb` to allow for customization (simple monkey-patch the DotCongiure::Options class)
+The options are an [OpenStruct](http://www.ruby-doc.org/stdlib-2.0/libdoc/ostruct/rdoc/OpenStruct.html) that has been extended in `dot_configure/options.rb` to allow for specific monkey-patching if desired
 
     > `TestClass.options.dot_configure_rules`
     => true
 
-You may also include DotConfigure to provide Class and Module level options as well as seperate instance-level options
+You may also `include` DotConfigure to provide Class and Module level options as well as seperate instance-level options
 
     class TestClass
       include DotConfigure
