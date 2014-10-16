@@ -1,6 +1,6 @@
 # .configure
 
-Simple configuration options
+Easily add configuration options to classes, modules, and object instances.
 
 ## Installation
 
@@ -20,13 +20,15 @@ And then execute:
       extend DotConfigure
     end
 
-`TestClass` will now have availalbe configuration blocks and options!
+`TestClass` will now have a configure method and options!
 
     TestClass.configure do |config|
       config.dot_configure_rules = true
     end
     
     => #<DotConfigure::Options dot_configure_rules=true>
+
+The resulting options are now available at `TestClass.options`
 
 #####Include DotConfigure to provide instance level options
 When you `include` dotconfigure, rather than extend, you get all the Class/Module level options, but also get seperate instance-level options objects.
